@@ -15,7 +15,9 @@
 		D8E19ED3271FA5C30029A7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E19ED1271FA5C30029A7CC /* LaunchScreen.storyboard */; };
 		D8E19EDE271FA5C30029A7CC /* ViewHierarchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E19EDD271FA5C30029A7CC /* ViewHierarchyTests.swift */; };
 		D8E19EE8271FA5C30029A7CC /* ViewHierarchyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E19EE7271FA5C30029A7CC /* ViewHierarchyUITests.swift */; };
-		D8E19EEA271FA5C30029A7CC /* ViewHierarchyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E19EE9271FA5C30029A7CC /* ViewHierarchyUITestsLaunchTests.swift */; };
+		D8E19EF7271FA6030029A7CC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E19EF6271FA6030029A7CC /* Utils.swift */; };
+		D8E19EFA271FA68C0029A7CC /* AEXML in Frameworks */ = {isa = PBXBuildFile; productRef = D8E19EF9271FA68C0029A7CC /* AEXML */; };
+		D8E19EFD271FA6B00029A7CC /* AEXML in Frameworks */ = {isa = PBXBuildFile; productRef = D8E19EFC271FA6B00029A7CC /* AEXML */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,7 @@
 		D8E19EDD271FA5C30029A7CC /* ViewHierarchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyTests.swift; sourceTree = "<group>"; };
 		D8E19EE3271FA5C30029A7CC /* ViewHierarchyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewHierarchyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E19EE7271FA5C30029A7CC /* ViewHierarchyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyUITests.swift; sourceTree = "<group>"; };
-		D8E19EE9271FA5C30029A7CC /* ViewHierarchyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8E19EF6271FA6030029A7CC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E19EFA271FA68C0029A7CC /* AEXML in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E19EFD271FA6B00029A7CC /* AEXML in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 				D8E19EDC271FA5C30029A7CC /* ViewHierarchyTests */,
 				D8E19EE6271FA5C30029A7CC /* ViewHierarchyUITests */,
 				D8E19EC4271FA5C00029A7CC /* Products */,
+				D8E19EFB271FA6B00029A7CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +127,16 @@
 			isa = PBXGroup;
 			children = (
 				D8E19EE7271FA5C30029A7CC /* ViewHierarchyUITests.swift */,
-				D8E19EE9271FA5C30029A7CC /* ViewHierarchyUITestsLaunchTests.swift */,
+				D8E19EF6271FA6030029A7CC /* Utils.swift */,
 			);
 			path = ViewHierarchyUITests;
+			sourceTree = "<group>";
+		};
+		D8E19EFB271FA6B00029A7CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +155,9 @@
 			dependencies = (
 			);
 			name = ViewHierarchy;
+			packageProductDependencies = (
+				D8E19EF9271FA68C0029A7CC /* AEXML */,
+			);
 			productName = ViewHierarchy;
 			productReference = D8E19EC3271FA5C00029A7CC /* ViewHierarchy.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +194,9 @@
 				D8E19EE5271FA5C30029A7CC /* PBXTargetDependency */,
 			);
 			name = ViewHierarchyUITests;
+			packageProductDependencies = (
+				D8E19EFC271FA6B00029A7CC /* AEXML */,
+			);
 			productName = ViewHierarchyUITests;
 			productReference = D8E19EE3271FA5C30029A7CC /* ViewHierarchyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -215,6 +233,9 @@
 				Base,
 			);
 			mainGroup = D8E19EBA271FA5C00029A7CC;
+			packageReferences = (
+				D8E19EF8271FA68C0029A7CC /* XCRemoteSwiftPackageReference "AEXML" */,
+			);
 			productRefGroup = D8E19EC4271FA5C00029A7CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,7 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E19EE8271FA5C30029A7CC /* ViewHierarchyUITests.swift in Sources */,
-				D8E19EEA271FA5C30029A7CC /* ViewHierarchyUITestsLaunchTests.swift in Sources */,
+				D8E19EF7271FA6030029A7CC /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +639,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8E19EF8271FA68C0029A7CC /* XCRemoteSwiftPackageReference "AEXML" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tadija/AEXML.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8E19EF9271FA68C0029A7CC /* AEXML */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E19EF8271FA68C0029A7CC /* XCRemoteSwiftPackageReference "AEXML" */;
+			productName = AEXML;
+		};
+		D8E19EFC271FA6B00029A7CC /* AEXML */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E19EF8271FA68C0029A7CC /* XCRemoteSwiftPackageReference "AEXML" */;
+			productName = AEXML;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8E19EBB271FA5C00029A7CC /* Project object */;
 }
